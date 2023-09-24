@@ -1,5 +1,6 @@
 # SubspaceMod
 Practice Modpack
+NOTE: This is not a Smash Subspace mod. It's just named that for our personal reasons.
 
 
 
