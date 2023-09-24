@@ -1,6 +1,7 @@
 package com.ysp.subspacemod;
 
 import com.mojang.logging.LogUtils;
+import com.ysp.subspacemod.block.ModBlocks;
 import com.ysp.subspacemod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
@@ -27,6 +28,7 @@ public class SubspaceMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

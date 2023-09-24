@@ -1,5 +1,11 @@
 {
   "item.subspacemod.subspace": "Subspace",
-  "item.subspacemod.raw_subspace": "Raw Subspace"
+  "item.subspacemod.raw_subspace": "Raw Subspace",
+
+  "block.subspacemod.subspace_block": "Block of Subspace",
+  "block.subspacemod.subspace_ore": "Subspace Ore",
+  "block.subspacemod.deepslate_subspace_ore": "Deepslate Subspace Ore",
+
+  "itemGroup.subspacetab": "Subspace"
 
 }
