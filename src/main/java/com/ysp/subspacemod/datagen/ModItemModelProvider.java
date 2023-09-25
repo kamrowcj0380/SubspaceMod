@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.SUBSPACE);
         simpleItem(ModItems.RAW_SUBSPACE);
+        simpleItem(ModItems.APPLE_PIPE);
     }
 
     //creates json file for a regular item being held (ex. Apple)
