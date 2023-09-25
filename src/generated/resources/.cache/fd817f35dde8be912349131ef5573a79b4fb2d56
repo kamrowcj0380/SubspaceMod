@@ -1,0 +1,10 @@
+// 1.19.2	2023-09-25T12:43:22.4658015	Block States: subspacemod
+125b1d6ec65f8c189d293609a15d3020f136342c assets/subspacemod/blockstates/deepslate_subspace_ore.json
+913f5b8845f6ac0d00011b0ad470b29b0487b128 assets/subspacemod/blockstates/subspace_block.json
+c5b2a0829a71243673c95c361101204cb9c9e0b4 assets/subspacemod/blockstates/subspace_ore.json
+c176e48bd15c31570ed8ee0bf204eaba548e30bf assets/subspacemod/models/block/deepslate_subspace_ore.json
+db0faf18021156006b5eb92e06cc4e2452bb9683 assets/subspacemod/models/block/subspace_block.json
+b05e02e1820f80423a4daa0b811676cffb130652 assets/subspacemod/models/block/subspace_ore.json
+daeb2414c67fd7e768942cad4a325c028e7027db assets/subspacemod/models/item/deepslate_subspace_ore.json
+a14d65881b4a746947c55e1c28582aa02823a724 assets/subspacemod/models/item/subspace_block.json
+bae43a1ebf5fbefe454c02ddc26c0a17745b2577 assets/subspacemod/models/item/subspace_ore.json

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "subspacemod:block/deepslate_subspace_ore"
+  }
+}

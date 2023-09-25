@@ -1,0 +1,7 @@
+// 1.19.2	2023-09-25T13:43:00.0941336	Recipes
+c15a910eeece9e64782467826e9c3eedfced5b28 data/minecraft/advancements/recipes/subspacetab/subspace.json
+c6ab2af4f7898d04e2e77b0496e7674eac8e99b9 data/minecraft/advancements/recipes/subspacetab/subspace_block.json
+f547a81360d51cac2cdcfcf2de4f804c040a55da data/minecraft/advancements/recipes/subspacetab/subspace_from_smelting_raw_subspace.json
+45220a21380de59858ccb31102794c9298d54f95 data/minecraft/recipes/subspace.json
+6b0d98f628205662bb8e35ad05bf30e594f6a2a1 data/minecraft/recipes/subspace_block.json
+b447308f3c72a23d0317cac4aff62845c4a90fde data/minecraft/recipes/subspace_from_smelting_raw_subspace.json

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "subspacemod:block/subspace_block"
+    }
+  }
+}
