@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "subspace",
+  "ingredients": [
+    {
+      "item": "subspacemod:subspace_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "subspacemod:subspace"
+  }
+}

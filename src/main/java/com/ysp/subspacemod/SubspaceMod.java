@@ -3,6 +3,8 @@ package com.ysp.subspacemod;
 import com.mojang.logging.LogUtils;
 import com.ysp.subspacemod.block.ModBlocks;
 import com.ysp.subspacemod.item.ModItems;
+import com.ysp.subspacemod.world.feature.ModConfiguredFeatures;
+import com.ysp.subspacemod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,8 +29,13 @@ public class SubspaceMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //items and blocks
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        //features
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
