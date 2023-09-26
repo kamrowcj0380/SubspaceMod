@@ -22,6 +22,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SUBSPACE);
         simpleItem(ModItems.RAW_SUBSPACE);
         simpleItem(ModItems.APPLE_PIPE);
+
+
+        withExistingParent(ModItems.SHAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     //creates json file for a regular item being held (ex. Apple)

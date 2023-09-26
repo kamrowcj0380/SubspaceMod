@@ -2,12 +2,17 @@ package com.ysp.subspacemod;
 
 import com.mojang.logging.LogUtils;
 import com.ysp.subspacemod.block.ModBlocks;
+import com.ysp.subspacemod.entity.ModEntityTypes;
+import com.ysp.subspacemod.entity.client.ShawnModel;
+import com.ysp.subspacemod.entity.client.ShawnRenderer;
+import com.ysp.subspacemod.entity.custom.ShawnEntity;
 import com.ysp.subspacemod.item.ModItems;
 import com.ysp.subspacemod.world.feature.ModConfiguredFeatures;
 import com.ysp.subspacemod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -37,6 +42,9 @@ public class SubspaceMod
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
+        //entities
+        ModEntityTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
 
@@ -54,6 +62,16 @@ public class SubspaceMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+        }
+
+        @SubscribeEvent
+        public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
+            event.registerLayerDefinition(ShawnModel.SHAWN_LAYER, ShawnModel::createBodyLayer);
+        }
+
+        @SubscribeEvent
+        public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
+            event.registerEntityRenderer(ModEntityTypes.SHAWN.get(), ShawnRenderer::new);
         }
     }
 }
