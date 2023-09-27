@@ -1,6 +1,7 @@
 package com.ysp.subspacemod.datagen;
 
 import com.ysp.subspacemod.SubspaceMod;
+import com.ysp.subspacemod.datagen.loot.ModLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,7 +14,7 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         generator.addProvider(event.includeServer(), new ModRecipeProvider(generator));
-//        generator.addProvider(event.includeServer(), new TutLootTables(generator));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(generator));
         ModBlockTagProvider blockTags = new ModBlockTagProvider(generator, event.getExistingFileHelper());
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new ModItemTagProvider(generator, blockTags, event.getExistingFileHelper()));
