@@ -22,6 +22,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SUBSPACE);
         simpleItem(ModItems.RAW_SUBSPACE);
         simpleItem(ModItems.APPLE_PIPE);
+        simpleItem(ModItems.OGRE_HANDS);
+        simpleItem(ModItems.QUAKE_PRO_GLASSES);
+        simpleItem(ModItems.NANCY);
+        simpleItem(ModItems.SHAWN_PHONE);
+        simpleItem(ModItems.PAINFUL_MAC_AND_CHEESE);
 
 
         withExistingParent(ModItems.SHAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

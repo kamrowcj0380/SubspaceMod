@@ -19,13 +19,24 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> RAW_SUBSPACE = ITEMS.register("raw_subspace",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> OGRE_HANDS = ITEMS.register("ogre_hands",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> QUAKE_PRO_GLASSES = ITEMS.register("quake_pro_glasses",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> NANCY = ITEMS.register("nancy",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> SHAWN_PHONE = ITEMS.register("shawn_phone",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> PAINFUL_MAC_AND_CHEESE = ITEMS.register("painful_mac_and_cheese",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+
 
     //Adds an apple pipe item with a max stack of 1
     public static final RegistryObject<Item> APPLE_PIPE = ITEMS.register("apple_pipe",
             () -> new ApplePipeItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
 
     //Creates spawn egg for shawn mob
-    public static final RegistryObject<Item> SHAWN_EGG = ITEMS.register("shawn", () -> new ForgeSpawnEggItem(ModEntityTypes.SHAWN, 0xff0000, 0x00ff00, new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> SHAWN_EGG = ITEMS.register("shawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.SHAWN, 0xff0000, 0x00ff00, new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

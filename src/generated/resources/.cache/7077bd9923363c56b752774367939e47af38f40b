@@ -1,5 +1,10 @@
-// 1.19.2	2023-09-26T14:23:52.1513272	Item Models: subspacemod
+// 1.19.2	2023-09-27T12:21:19.836503	Item Models: subspacemod
 651cda276d2693534d84ae9868c2adcaba3e0286 assets/subspacemod/models/item/apple_pipe.json
+0461a94f15a79a584f69a6ae85eb7ff85e238687 assets/subspacemod/models/item/nancy.json
+f25396858585795ad923bb9556109c71b7e13e30 assets/subspacemod/models/item/ogre_hands.json
+83f7dffbf5e7f43dbd5efcd6672e9b8cc920ad46 assets/subspacemod/models/item/painful_mac_and_cheese.json
+52291c21248cf4475790ef38b64f6286d21c7228 assets/subspacemod/models/item/quake_pro_glasses.json
 eb8a11bb958dd7c4658e2f31b0708cc1889ac055 assets/subspacemod/models/item/raw_subspace.json
-63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/subspacemod/models/item/shawn.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/subspacemod/models/item/shawn_egg.json
+4bf601328ceeb07c038fb5076f171a42d2f775e1 assets/subspacemod/models/item/shawn_phone.json
 8e4112ec041aa86178f046be3cdce9e6ec3973d3 assets/subspacemod/models/item/subspace.json
