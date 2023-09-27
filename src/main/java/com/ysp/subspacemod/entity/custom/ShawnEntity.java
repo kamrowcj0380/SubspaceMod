@@ -24,12 +24,14 @@ public class ShawnEntity extends Monster {
                 .add(Attributes.ATTACK_DAMAGE, 3.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.4f)
+                .add(Attributes.KNOCKBACK_RESISTANCE, -50.0f)
                 .add(Attributes.FOLLOW_RANGE, 35.0D).build();
     }
 
     //Adds a behavior goal ai to attack the nearest player
-    protected void addBehaviourGoals() {
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0D, false));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+    @Override
+    protected void registerGoals(){
+        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.0D, false));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 }
