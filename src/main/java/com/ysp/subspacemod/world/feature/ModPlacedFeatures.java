@@ -17,8 +17,8 @@ public class ModPlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> SUBSPACE_ORE_PLACED = PLACED_FEATURES.register("subspace_ore_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.SUBSPACE_ORE.getHolder().get(),
-                    commonOrePlacement(20, //veins per chunk, TODO: reduce this!
-                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+                    commonOrePlacement(40, //veins per chunk, TODO: reduce this!
+                            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.belowTop(80)))));
 
     //TODO: implement end and nether spawns (overworld is seen in above statement) if necessary
 

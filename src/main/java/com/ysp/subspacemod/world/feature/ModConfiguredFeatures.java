@@ -34,7 +34,7 @@ public class ModConfiguredFeatures {
     * */
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> SUBSPACE_ORE = CONFIGURED_FEATURES.register("subspace_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_SUBSPACE_ORES.get(), 3)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_SUBSPACE_ORES.get(), 15)));
     //last number in line above is the vein size
 
 
