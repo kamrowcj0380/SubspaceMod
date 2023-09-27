@@ -10,6 +10,7 @@ import com.ysp.subspacemod.item.ModItems;
 import com.ysp.subspacemod.world.feature.ModConfiguredFeatures;
 import com.ysp.subspacemod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -61,7 +62,7 @@ public class SubspaceMod
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntityTypes.SHAWN.get(), ShawnRenderer::new);
         }
 
         @SubscribeEvent
