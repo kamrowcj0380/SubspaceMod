@@ -21,12 +21,21 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.SUBSPACE);
         simpleItem(ModItems.RAW_SUBSPACE);
+
         simpleItem(ModItems.APPLE_PIPE);
         simpleItem(ModItems.OGRE_HANDS);
         simpleItem(ModItems.QUAKE_PRO_GLASSES);
         simpleItem(ModItems.NANCY);
         simpleItem(ModItems.SHAWN_PHONE);
         simpleItem(ModItems.PAINFUL_MAC_AND_CHEESE);
+
+        simpleItem(ModItems.ANDREW_SOUL);
+        simpleItem(ModItems.ANGELO_SOUL);
+        simpleItem(ModItems.CONNOR_SOUL);
+        simpleItem(ModItems.JEVAN_SOUL);
+        simpleItem(ModItems.SHAWN_SOUL);
+        simpleItem(ModItems.TANNER_SOUL);
+        simpleItem(ModItems.WILL_SOUL);
 
 
         withExistingParent(ModItems.SHAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

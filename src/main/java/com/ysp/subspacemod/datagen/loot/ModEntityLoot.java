@@ -22,10 +22,13 @@ public class ModEntityLoot extends EntityLoot {
     protected void addTables() {
         //Gives the shawn entity a loot table
         add(ModEntityTypes.SHAWN.get(), LootTable.lootTable()
-                //Chance to drop shawns phone item
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(ModItems.SHAWN_PHONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 1.0F))).apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F)))))
+                //Chance to drop shawn's soul
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                        .add(LootItem.lootTableItem(ModItems.SHAWN_SOUL.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 1.0F)))
+                                .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F))))));
                 //Guaranteed drop of subspace item
-                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(ModItems.SUBSPACE.get())).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1))).apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(1, 1)))));
+                //.withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(ModItems.SUBSPACE.get())).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1))).apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(1, 1)))));
 
     }
 

@@ -19,6 +19,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> RAW_SUBSPACE = ITEMS.register("raw_subspace",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> ANDREW_SOUL = ITEMS.register("andrew_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> ANGELO_SOUL = ITEMS.register("angelo_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> CONNOR_SOUL = ITEMS.register("connor_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> JEVAN_SOUL = ITEMS.register("jevan_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> SHAWN_SOUL = ITEMS.register("shawn_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> TANNER_SOUL = ITEMS.register("tanner_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> WILL_SOUL = ITEMS.register("will_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> OGRE_HANDS = ITEMS.register("ogre_hands",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> QUAKE_PRO_GLASSES = ITEMS.register("quake_pro_glasses",
