@@ -2,6 +2,7 @@ package com.ysp.subspacemod.event;
 
 import com.ysp.subspacemod.SubspaceMod;
 import com.ysp.subspacemod.entity.ModEntityTypes;
+import com.ysp.subspacemod.entity.custom.AndrewEntity;
 import com.ysp.subspacemod.entity.custom.ShawnEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +20,7 @@ public class ModEvents {
         //Sets attributes for the shawn entity
         public static void entityAttributeEvent(EntityAttributeCreationEvent event){
             event.put(ModEntityTypes.SHAWN.get(), ShawnEntity.setAttributes());
+            event.put(ModEntityTypes.ANDREW.get(), AndrewEntity.setAttributes());
         }
     }
 }

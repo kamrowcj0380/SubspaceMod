@@ -45,6 +45,9 @@ public class ModItems {
     //Creates spawn egg for shawn mob
     public static final RegistryObject<Item> SHAWN_EGG = ITEMS.register("shawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.SHAWN, 0xff0000, 0x00ff00, new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
 
+    //Creates spawn egg for andrew mob
+    public static final RegistryObject<Item> ANDREW_EGG = ITEMS.register("andrew_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.ANDREW, 0xff0000, 0x00ff00, new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

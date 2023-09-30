@@ -8,6 +8,7 @@
   "item.subspacemod.shawn_phone": "Shawn's Phone",
   "item.subspacemod.painful_mac_and_cheese": "Painful Mac and Cheese",
   "item.subspacemod.shawn_egg": "Shawn Spawn Egg",
+  "item.subspacemod.andrew_egg": "Andrew Spawn Egg",
 
   "item.subspacemod.andrew_soul": "Andrew Soul",
   "item.subspacemod.angelo_soul": "Angelo Soul",
@@ -22,6 +23,7 @@
   "block.subspacemod.deepslate_subspace_ore": "Deepslate Subspace Ore",
 
   "entity.subspacemod.shawn": "Shawn",
+  "entity.subspacemod.andrew": "Andrew",
 
   "itemGroup.subspacetab": "Subspace"
 

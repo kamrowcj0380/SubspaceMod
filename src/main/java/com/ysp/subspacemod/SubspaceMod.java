@@ -5,12 +5,17 @@ import com.ysp.subspacemod.block.ModBlocks;
 import com.ysp.subspacemod.entity.ModEntityTypes;
 import com.ysp.subspacemod.entity.client.ShawnModel;
 import com.ysp.subspacemod.entity.client.ShawnRenderer;
+import com.ysp.subspacemod.entity.client.AndrewModel;
+import com.ysp.subspacemod.entity.client.AndrewRenderer;
 import com.ysp.subspacemod.entity.custom.ShawnEntity;
 import com.ysp.subspacemod.item.ModItems;
+import com.ysp.subspacemod.util.ModItemProperties;
 import com.ysp.subspacemod.world.feature.ModConfiguredFeatures;
 import com.ysp.subspacemod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -46,6 +51,8 @@ public class SubspaceMod
         //entities
         ModEntityTypes.register(modEventBus);
 
+        //clientEvent stuff
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         modEventBus.addListener(this::commonSetup);
 
 
@@ -54,7 +61,7 @@ public class SubspaceMod
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        ModItemProperties.addCustomItemProperties();
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -63,16 +70,19 @@ public class SubspaceMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntityTypes.SHAWN.get(), ShawnRenderer::new);
+            EntityRenderers.register(ModEntityTypes.ANDREW.get(), AndrewRenderer::new);
         }
 
         @SubscribeEvent
         public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
             event.registerLayerDefinition(ShawnModel.SHAWN_LAYER, ShawnModel::createBodyLayer);
+            event.registerLayerDefinition(AndrewModel.ANDREW_LAYER, AndrewModel::createBodyLayer);
         }
 
         @SubscribeEvent
         public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
             event.registerEntityRenderer(ModEntityTypes.SHAWN.get(), ShawnRenderer::new);
+            event.registerEntityRenderer(ModEntityTypes.ANDREW.get(), AndrewRenderer::new);
         }
     }
 }
