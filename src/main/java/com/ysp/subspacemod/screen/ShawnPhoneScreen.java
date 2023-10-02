@@ -3,6 +3,7 @@ package com.ysp.subspacemod.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.ysp.subspacemod.SubspaceMod;
+import net.minecraft.Util;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -26,23 +27,33 @@ public class ShawnPhoneScreen extends AbstractContainerScreen<ShawnPhoneMenu> {
     @Override
     protected void init() {
         super.init();
-        this.addRenderableWidget(new Button(90, 90, 50, 50, Component.literal("Look at memes"), (pOnPress) -> this.lookAtMemes()));
+        //adds a button
+        this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 15, imageWidth - 10, imageHeight / 10, Component.literal("Look at memes"), (pOnPress) -> this.lookAtMemes()));
+        this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 30, imageWidth - 10, imageHeight / 10, Component.literal("Read Manga"), (pOnPress) -> this.readManga()));
 
     }
 
-    public void lookAtMemes(){
-        try{
-            if(Desktop.isDesktopSupported()) {
-                Desktop.getDesktop().browse(new URI("https://reddit.com"));
+    public void lookAtMemes() {
+        try {
+            if (Util.getPlatform() == Util.OS.WINDOWS) {
+                Util.OS.WINDOWS.openUri(new URI("https://reddit.com"));
             }
-        } catch (IOException | URISyntaxException e) {
+        } catch(URISyntaxException e){
+                throw new RuntimeException(e);
+            }
+        }
+
+
+    public void readManga() {
+        try {
+            if (Util.getPlatform() == Util.OS.WINDOWS) {
+                Util.OS.WINDOWS.openUri(new URI("https://www.viz.com/shonenjump"));
+            }
+        } catch(URISyntaxException e){
             throw new RuntimeException(e);
         }
     }
 
-    private void outputMessage(Player player) {
-        player.sendSystemMessage(Component.literal("Bitchin..."));
-    }
 
     @Override
     protected void renderBg(PoseStack stack, float pPartialTick, int pMouseX, int pMouseY) {
