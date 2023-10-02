@@ -9,10 +9,13 @@ import com.ysp.subspacemod.entity.client.AndrewModel;
 import com.ysp.subspacemod.entity.client.AndrewRenderer;
 import com.ysp.subspacemod.entity.custom.ShawnEntity;
 import com.ysp.subspacemod.item.ModItems;
+import com.ysp.subspacemod.screen.ModMenuTypes;
+import com.ysp.subspacemod.screen.ShawnPhoneScreen;
 import com.ysp.subspacemod.util.ModItemProperties;
 import com.ysp.subspacemod.world.feature.ModConfiguredFeatures;
 import com.ysp.subspacemod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -51,6 +54,8 @@ public class SubspaceMod
         //entities
         ModEntityTypes.register(modEventBus);
 
+        ModMenuTypes.register(modEventBus);
+
         //clientEvent stuff
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         modEventBus.addListener(this::commonSetup);
@@ -71,6 +76,8 @@ public class SubspaceMod
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntityTypes.SHAWN.get(), ShawnRenderer::new);
             EntityRenderers.register(ModEntityTypes.ANDREW.get(), AndrewRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.SHAWN_PHONE_MENU.get(), ShawnPhoneScreen::new);
         }
 
         @SubscribeEvent

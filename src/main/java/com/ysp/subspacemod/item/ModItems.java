@@ -3,6 +3,7 @@ package com.ysp.subspacemod.item;
 import com.ysp.subspacemod.SubspaceMod;
 import com.ysp.subspacemod.entity.ModEntityTypes;
 import com.ysp.subspacemod.item.custom.ApplePipeItem;
+import com.ysp.subspacemod.item.custom.ShawnPhoneItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,7 +34,7 @@ public class ModItems {
     public static final RegistryObject<Item> NANCY = ITEMS.register("nancy",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> SHAWN_PHONE = ITEMS.register("shawn_phone",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+            () -> new ShawnPhoneItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> PAINFUL_MAC_AND_CHEESE = ITEMS.register("painful_mac_and_cheese",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
 
