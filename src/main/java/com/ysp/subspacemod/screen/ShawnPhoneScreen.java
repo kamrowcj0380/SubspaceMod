@@ -3,14 +3,13 @@ package com.ysp.subspacemod.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.ysp.subspacemod.SubspaceMod;
-import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 
 import java.awt.*;
 import java.io.IOException;
@@ -27,17 +26,24 @@ public class ShawnPhoneScreen extends AbstractContainerScreen<ShawnPhoneMenu> {
     @Override
     protected void init() {
         super.init();
-        this.addRenderableWidget(new Button(1, 1, 50, 50, Component.literal("Look at memes"), (p_93726_) -> this.lookAtMemes()));
+        this.addRenderableWidget(new Button(90, 90, 50, 50, Component.literal("Look at memes"), (pOnPress) -> this.lookAtMemes()));
 
     }
 
     public void lookAtMemes(){
         try{
-            Desktop.getDesktop().browse(new URI("https://reddit.com"));
+            if(Desktop.isDesktopSupported()) {
+                Desktop.getDesktop().browse(new URI("https://reddit.com"));
+            }
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
     }
+
+    private void outputMessage(Player player) {
+        player.sendSystemMessage(Component.literal("Bitchin..."));
+    }
+
     @Override
     protected void renderBg(PoseStack stack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
