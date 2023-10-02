@@ -27,15 +27,18 @@ public class ShawnPhoneScreen extends AbstractContainerScreen<ShawnPhoneMenu> {
     @Override
     protected void init() {
         super.init();
-        //adds a button
+        //adds buttons to the gui with text and functionality
         this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 15, imageWidth - 10, imageHeight / 10, Component.literal("Look at memes"), (pOnPress) -> this.lookAtMemes()));
         this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 30, imageWidth - 10, imageHeight / 10, Component.literal("Read Manga"), (pOnPress) -> this.readManga()));
 
     }
 
+    //opens reddit.com in the default browser
     public void lookAtMemes() {
         try {
+            //checks if user is using windows
             if (Util.getPlatform() == Util.OS.WINDOWS) {
+                //opens url
                 Util.OS.WINDOWS.openUri(new URI("https://reddit.com"));
             }
         } catch(URISyntaxException e){
@@ -43,10 +46,12 @@ public class ShawnPhoneScreen extends AbstractContainerScreen<ShawnPhoneMenu> {
             }
         }
 
-
+    //opens shonen jump in default browser
     public void readManga() {
         try {
+            //checks if user is using windows
             if (Util.getPlatform() == Util.OS.WINDOWS) {
+                //opens url
                 Util.OS.WINDOWS.openUri(new URI("https://www.viz.com/shonenjump"));
             }
         } catch(URISyntaxException e){

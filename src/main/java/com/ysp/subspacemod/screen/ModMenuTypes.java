@@ -14,6 +14,7 @@ public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, SubspaceMod.MOD_ID);
 
+    //registers shawns phone menu
     public static final RegistryObject<MenuType<ShawnPhoneMenu>> SHAWN_PHONE_MENU = registerMenuType(ShawnPhoneMenu::new, "shawn_phone_menu");
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name){

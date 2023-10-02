@@ -13,10 +13,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.function.Function;
 
 public class ShawnPhoneMenu extends AbstractContainerMenu {
+    //client constructor
     public ShawnPhoneMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
         this(id, inv);
     }
-
+    //server constructor
     public ShawnPhoneMenu(int id, Inventory inv){
         super(ModMenuTypes.SHAWN_PHONE_MENU.get(), id);
     }
@@ -27,6 +28,7 @@ public class ShawnPhoneMenu extends AbstractContainerMenu {
         return null;
     }
 
+    //checks that the player is holding shawns phone item
     @Override
     public boolean stillValid(Player player) {
         if(player.getMainHandItem().is(ModItems.SHAWN_PHONE.get())){
