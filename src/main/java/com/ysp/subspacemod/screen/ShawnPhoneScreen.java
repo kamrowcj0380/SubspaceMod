@@ -27,7 +27,7 @@ public class ShawnPhoneScreen extends AbstractContainerScreen<ShawnPhoneMenu> {
     @Override
     protected void init() {
         super.init();
-        this.addRenderableWidget(new Button(1, 1, 1, 1, Component.literal("Look at memes"), (p_93726_) -> this.lookAtMemes()));
+        this.addRenderableWidget(new Button(1, 1, 50, 50, Component.literal("Look at memes"), (p_93726_) -> this.lookAtMemes()));
 
     }
 
