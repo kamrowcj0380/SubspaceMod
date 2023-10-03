@@ -33,7 +33,7 @@ public class ModItems {
     public static final RegistryObject<Item> QUAKE_PRO_GLASSES = ITEMS.register("quake_pro_glasses",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> NANCY = ITEMS.register("nancy",
-            () -> new NancyItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+            () -> new NancyItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1).durability(64)));
     public static final RegistryObject<Item> SHAWN_PHONE = ITEMS.register("shawn_phone",
             () -> new ShawnPhoneItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> PAINFUL_MAC_AND_CHEESE = ITEMS.register("painful_mac_and_cheese",
@@ -42,7 +42,7 @@ public class ModItems {
 
     //Adds an apple pipe item with a max stack of 1
     public static final RegistryObject<Item> APPLE_PIPE = ITEMS.register("apple_pipe",
-            () -> new ApplePipeItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+            () -> new ApplePipeItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1).durability(10)));
 
     //Creates spawn egg for shawn mob
     public static final RegistryObject<Item> SHAWN_EGG = ITEMS.register("shawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.SHAWN, 0xff0000, 0x00ff00, new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));

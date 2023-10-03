@@ -31,13 +31,24 @@ public class ApplePipeItem extends Item {
         //Checks for the event to happen on the server, and only allows the item to be used while in the main hand
         if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND){
             //Tell it like it is (output "Bitchin..." to chat message)
-            outputMessage((player));
+            //outputMessage((player));
             //Applies a cooldown
             player.getCooldowns().addCooldown(this, PIPE_COOLDOWN);
             //Applies nausea 3 effect for 20 seconds
             player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 800, 2, false, false, true));
             //Applies strength 3 effect for 10 seconds
             player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 2, false, false, true));
+            //Displays a cool message above the hotbar
+            player.displayClientMessage(Component.literal("Bitchin..."), true);
+
+            //plays a sound on use
+            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.FIRE_AMBIENT, SoundSource.NEUTRAL, 1.0F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
+
+            //get the item, then take one durability
+            ItemStack itemStack = player.getItemInHand(hand);
+            itemStack.hurtAndBreak(1, player, (entity) -> {
+                entity.broadcastBreakEvent(hand);
+            });
         }
 
         return super.use(level, player, hand);
