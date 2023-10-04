@@ -5,10 +5,14 @@ import com.ysp.subspacemod.entity.ModEntityTypes;
 import com.ysp.subspacemod.item.custom.ApplePipeItem;
 import com.ysp.subspacemod.item.custom.NancyItem;
 import com.ysp.subspacemod.item.custom.ShawnPhoneItem;
+import com.ysp.subspacemod.util.ModArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,6 +28,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> RAW_SUBSPACE = ITEMS.register("raw_subspace",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+
     public static final RegistryObject<Item> ANDREW_SOUL = ITEMS.register("andrew_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> ANGELO_SOUL = ITEMS.register("angelo_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> CONNOR_SOUL = ITEMS.register("connor_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
@@ -31,6 +36,7 @@ public class ModItems {
     public static final RegistryObject<Item> SHAWN_SOUL = ITEMS.register("shawn_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> TANNER_SOUL = ITEMS.register("tanner_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> WILL_SOUL = ITEMS.register("will_soul", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
+
     public static final RegistryObject<Item> OGRE_HANDS = ITEMS.register("ogre_hands",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> QUAKE_PRO_GLASSES = ITEMS.register("quake_pro_glasses",
@@ -43,11 +49,19 @@ public class ModItems {
     //painful mac and cheese food item that deals instant damage 1 when eaten
     public static final RegistryObject<Item> PAINFUL_MAC_AND_CHEESE = ITEMS.register("painful_mac_and_cheese",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.HARM, 1, 0), 1F).build())));
-
-
     //Adds an apple pipe item with a max stack of 1 and 10 durability
     public static final RegistryObject<Item> APPLE_PIPE = ITEMS.register("apple_pipe",
             () -> new ApplePipeItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1).durability(10)));
+
+    //armor set
+    public static final RegistryObject<Item> SHAWN_AVIATORS = ITEMS.register("shawn_aviators",
+            () -> new ArmorItem(ModArmorMaterials.SUBSPACE, EquipmentSlot.HEAD, new Item.Properties().rarity(Rarity.RARE).tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> ROSENDALE_SHIRT = ITEMS.register("rosendale_shirt",
+            () -> new ArmorItem(ModArmorMaterials.SUBSPACE, EquipmentSlot.CHEST, new Item.Properties().rarity(Rarity.RARE).tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> CHURCH_PANTS = ITEMS.register("church_pants",
+            () -> new ArmorItem(ModArmorMaterials.SUBSPACE, EquipmentSlot.LEGS, new Item.Properties().rarity(Rarity.RARE).tab(ModCreativeModeTab.SUBSPACE_TAB)));
+    public static final RegistryObject<Item> CLOWN_SHOES = ITEMS.register("clown_shoes",
+            () -> new ArmorItem(ModArmorMaterials.SUBSPACE, EquipmentSlot.FEET, new Item.Properties().rarity(Rarity.RARE).tab(ModCreativeModeTab.SUBSPACE_TAB)));
 
     //Creates spawn egg for shawn mob
     public static final RegistryObject<Item> SHAWN_EGG = ITEMS.register("shawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.SHAWN, 0xff0000, 0x00ff00, new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB)));
