@@ -1,5 +1,6 @@
-// 1.19.2	2023-09-29T11:03:10.3535315	LootTables
+// 1.19.2	2023-10-04T14:06:30.5045092	LootTables
 dbf022b61feaa54844c9eda6a82bfc977434c7aa data/subspacemod/loot_tables/blocks/deepslate_subspace_ore.json
 9cb3b04c1d6d7fefbb385e311d6375fd26e42322 data/subspacemod/loot_tables/blocks/subspace_block.json
 1b4838125261c208dda013d20b295ec11ddc6070 data/subspacemod/loot_tables/blocks/subspace_ore.json
+a0524981a391427ac5e85fee96ab6d0686d96b46 data/subspacemod/loot_tables/entities/andrew.json
 197860cdb93eff485a815c2b3ff3525a0a060718 data/subspacemod/loot_tables/entities/shawn.json

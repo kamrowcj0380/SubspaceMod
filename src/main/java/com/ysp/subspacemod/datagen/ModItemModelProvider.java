@@ -37,6 +37,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TANNER_SOUL);
         simpleItem(ModItems.WILL_SOUL);
 
+        simpleItem(ModItems.SHAWN_AVIATORS);
+        simpleItem(ModItems.ROSENDALE_SHIRT);
+        simpleItem(ModItems.CHURCH_PANTS);
+        simpleItem(ModItems.CLOWN_SHOES);
+
 
         withExistingParent(ModItems.SHAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }

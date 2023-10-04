@@ -30,6 +30,12 @@ public class ModEntityLoot extends EntityLoot {
                 //Guaranteed drop of subspace item
                 //.withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1)).add(LootItem.lootTableItem(ModItems.SUBSPACE.get())).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1))).apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(1, 1)))));
 
+        add(ModEntityTypes.ANDREW.get(), LootTable.lootTable()
+                //Chance to drop shawn's soul
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                        .add(LootItem.lootTableItem(ModItems.ANDREW_SOUL.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(0.0F, 1.0F)))
+                                .apply(LootingEnchantFunction.lootingMultiplier(UniformGenerator.between(0.0F, 1.0F))))));
     }
 
     @Override

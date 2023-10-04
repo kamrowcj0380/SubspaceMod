@@ -1,7 +1,9 @@
-// 1.19.2	2023-09-29T11:03:10.3215304	Item Models: subspacemod
+// 1.19.2	2023-10-04T14:06:30.5025084	Item Models: subspacemod
 d46e47c646defe62758f328c3375acf5b3aff923 assets/subspacemod/models/item/andrew_soul.json
 a9d70c154c2ba533513a7932291981e7dd1976c8 assets/subspacemod/models/item/angelo_soul.json
 651cda276d2693534d84ae9868c2adcaba3e0286 assets/subspacemod/models/item/apple_pipe.json
+3183316e9ad7e3e467a0401a8a74ebf1ac5d8ab4 assets/subspacemod/models/item/church_pants.json
+5d0671e2de17bd256709967cb6e4cdae96d8ee89 assets/subspacemod/models/item/clown_shoes.json
 a85b045c4475796faa4af06def51667562e033a2 assets/subspacemod/models/item/connor_soul.json
 6307fc2edd87bec791634555386527fef17db3f4 assets/subspacemod/models/item/jevan_soul.json
 0461a94f15a79a584f69a6ae85eb7ff85e238687 assets/subspacemod/models/item/nancy.json
@@ -9,6 +11,8 @@ f25396858585795ad923bb9556109c71b7e13e30 assets/subspacemod/models/item/ogre_han
 83f7dffbf5e7f43dbd5efcd6672e9b8cc920ad46 assets/subspacemod/models/item/painful_mac_and_cheese.json
 52291c21248cf4475790ef38b64f6286d21c7228 assets/subspacemod/models/item/quake_pro_glasses.json
 eb8a11bb958dd7c4658e2f31b0708cc1889ac055 assets/subspacemod/models/item/raw_subspace.json
+40dd0ab3b939380ff1bdb0881141caca7cab612e assets/subspacemod/models/item/rosendale_shirt.json
+7aa7de3f062241dfe250b3d610047b055d9ea1cd assets/subspacemod/models/item/shawn_aviators.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/subspacemod/models/item/shawn_egg.json
 4bf601328ceeb07c038fb5076f171a42d2f775e1 assets/subspacemod/models/item/shawn_phone.json
 faf07376a7b74995a7da554281e82ccb1970025d assets/subspacemod/models/item/shawn_soul.json

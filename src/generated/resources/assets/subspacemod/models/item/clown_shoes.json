@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "subspacemod:item/apple_pipe_lit"
+    "layer0": "subspacemod:item/clown_shoes"
   }
 }
