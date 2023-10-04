@@ -28,8 +28,8 @@ public class ShawnPhoneScreen extends AbstractContainerScreen<ShawnPhoneMenu> {
     protected void init() {
         super.init();
         //adds buttons to the gui with text and functionality
-        this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 15, imageWidth - 10, imageHeight / 10, Component.literal("Look at memes"), (pOnPress) -> this.lookAtMemes()));
-        this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 30, imageWidth - 10, imageHeight / 10, Component.literal("Read Manga"), (pOnPress) -> this.readManga()));
+        this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 15, imageWidth - 20, imageHeight / 9, Component.literal("Look at memes"), (pOnPress) -> this.lookAtMemes()));
+        this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 35, imageWidth - 20, imageHeight / 9, Component.literal("Read Manga"), (pOnPress) -> this.readManga()));
 
     }
 
