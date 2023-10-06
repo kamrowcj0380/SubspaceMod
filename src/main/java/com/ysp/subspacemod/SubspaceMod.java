@@ -25,13 +25,18 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotTypeMessage;
+import top.theillusivec4.curios.api.SlotTypePreset;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SubspaceMod.MOD_ID)
@@ -60,6 +65,9 @@ public class SubspaceMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         modEventBus.addListener(this::commonSetup);
 
+        //calls method for making curios slots available
+        modEventBus.addListener(this::enqueueIMC);
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -67,6 +75,14 @@ public class SubspaceMod
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         ModItemProperties.addCustomItemProperties();
+    }
+
+    //loads curios slots to be available to the player
+    public void enqueueIMC(final InterModEnqueueEvent event){
+        SlotTypePreset[] types = {SlotTypePreset.HEAD, SlotTypePreset.HANDS, SlotTypePreset.BELT};
+        for (SlotTypePreset type : types){
+            InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> type.getMessageBuilder().build());
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

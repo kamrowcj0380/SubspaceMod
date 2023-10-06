@@ -2,30 +2,25 @@ package com.ysp.subspacemod.item.custom;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import top.theillusivec4.curios.api.SlotContext;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-public class NancyItem extends Item {
+public class NancyItem extends Item implements ICurioItem {
     public NancyItem(Properties pProperties) {
         super(pProperties);
     }
 
-    //Method for lighting entity on fire when right clicked on
+    //gives the player fire resistance while nancy is equipped
     @Override
-    public InteractionResult interactLivingEntity(ItemStack pStack, Player pPlayer, LivingEntity pInteractionTarget, InteractionHand pUsedHand) {
-        if(pUsedHand == InteractionHand.MAIN_HAND){
-            pInteractionTarget.setSecondsOnFire(8);
-
-            //get the item, then take one durability
-            ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
-            itemStack.hurtAndBreak(1, pPlayer, (entity) -> {
-                entity.broadcastBreakEvent(pUsedHand);
-            });
-
+    public void curioTick(SlotContext slotContext, ItemStack stack) {
+        if (!slotContext.entity().level.isClientSide && slotContext.entity().tickCount % 15 == 0) {
+            slotContext.entity().addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 250, 0, false, false, true));
         }
-
-        return super.interactLivingEntity(pStack, pPlayer, pInteractionTarget, pUsedHand);
     }
 }
