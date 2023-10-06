@@ -22,7 +22,7 @@ public class ShawnEntity extends Monster {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 20.0D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.ATTACK_SPEED, 1.0f)
+                .add(Attributes.ATTACK_SPEED, 0.7f)
                 .add(Attributes.MOVEMENT_SPEED, 0.4f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, -50.0f)
                 .add(Attributes.FOLLOW_RANGE, 35.0D).build();
