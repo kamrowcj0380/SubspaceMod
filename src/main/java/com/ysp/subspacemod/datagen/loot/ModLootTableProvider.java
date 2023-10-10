@@ -23,7 +23,7 @@ import java.util.function.Supplier;
 
 public class ModLootTableProvider extends LootTableProvider {
     //Creates the loot table list of all the different loot table classes
-    private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> lootTables = ImmutableList.of(Pair.of(ModBlockLoot::new, LootContextParamSets.BLOCK), Pair.of(ModEntityLoot::new, LootContextParamSets.CHEST));
+    private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> lootTables = ImmutableList.of(Pair.of(ModBlockLoot::new, LootContextParamSets.BLOCK), Pair.of(ModChestLoot::new, LootContextParamSets.CHEST), Pair.of(ModEntityLoot::new, LootContextParamSets.ENTITY));
 
 
     public ModLootTableProvider(DataGenerator dataGenerator) {

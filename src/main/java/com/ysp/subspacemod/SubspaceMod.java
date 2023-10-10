@@ -61,6 +61,7 @@ public class SubspaceMod
 
         ModMenuTypes.register(modEventBus);
 
+
         //clientEvent stuff
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
         modEventBus.addListener(this::commonSetup);
