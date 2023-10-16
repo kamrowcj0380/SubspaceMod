@@ -8,7 +8,6 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -25,9 +24,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.APPLE_PIPE);
         simpleItem(ModItems.OGRE_HANDS);
         simpleItem(ModItems.QUAKE_PRO_GLASSES);
+        simpleItem(ModItems.SHAWN_AVIATORS);
         simpleItem(ModItems.NANCY);
         simpleItem(ModItems.SHAWN_PHONE);
         simpleItem(ModItems.PAINFUL_MAC_AND_CHEESE);
+        simpleItem(ModItems.PUZZLE_CUBE);
+        simpleItem(ModItems.PLASTIC_SPOON);
 
         simpleItem(ModItems.ANDREW_SOUL);
         simpleItem(ModItems.ANGELO_SOUL);
@@ -37,7 +39,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TANNER_SOUL);
         simpleItem(ModItems.WILL_SOUL);
 
-        simpleItem(ModItems.SHAWN_AVIATORS);
+        simpleItem(ModItems.TRIP_HAT);
         simpleItem(ModItems.ROSENDALE_SHIRT);
         simpleItem(ModItems.CHURCH_PANTS);
         simpleItem(ModItems.CLOWN_SHOES);

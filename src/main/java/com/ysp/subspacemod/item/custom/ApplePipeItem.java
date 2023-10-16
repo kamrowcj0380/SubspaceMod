@@ -30,8 +30,6 @@ public class ApplePipeItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         //Checks for the event to happen on the server, and only allows the item to be used while in the main hand
         if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND){
-            //Tell it like it is (output "Bitchin..." to chat message)
-            //outputMessage((player));
             //Applies a cooldown
             player.getCooldowns().addCooldown(this, PIPE_COOLDOWN);
             //Applies nausea 3 effect for 20 seconds
@@ -52,9 +50,5 @@ public class ApplePipeItem extends Item {
         }
 
         return super.use(level, player, hand);
-    }
-
-    private void outputMessage(Player player) {
-        player.sendSystemMessage(Component.literal("Bitchin..."));
     }
 }

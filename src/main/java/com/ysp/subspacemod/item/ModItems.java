@@ -2,9 +2,7 @@ package com.ysp.subspacemod.item;
 
 import com.ysp.subspacemod.SubspaceMod;
 import com.ysp.subspacemod.entity.ModEntityTypes;
-import com.ysp.subspacemod.item.custom.ApplePipeItem;
-import com.ysp.subspacemod.item.custom.NancyItem;
-import com.ysp.subspacemod.item.custom.ShawnPhoneItem;
+import com.ysp.subspacemod.item.custom.*;
 import com.ysp.subspacemod.util.ModArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -41,6 +39,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> QUAKE_PRO_GLASSES = ITEMS.register("quake_pro_glasses",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> SHAWN_AVIATORS = ITEMS.register("shawn_aviators",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     //Adds nancy item with max stack of 1
     public static final RegistryObject<Item> NANCY = ITEMS.register("nancy",
             () -> new NancyItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
@@ -48,13 +48,17 @@ public class ModItems {
             () -> new ShawnPhoneItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     //painful mac and cheese food item that deals instant damage 1 when eaten
     public static final RegistryObject<Item> PAINFUL_MAC_AND_CHEESE = ITEMS.register("painful_mac_and_cheese",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.HARM, 1, 0), 1F).build())));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).food(new FoodProperties.Builder().nutrition(10).saturationMod(1.5F).effect(new MobEffectInstance(MobEffects.HARM, 1, 0), 1F).build())));
     //Adds an apple pipe item with a max stack of 1 and 10 durability
     public static final RegistryObject<Item> APPLE_PIPE = ITEMS.register("apple_pipe",
             () -> new ApplePipeItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1).durability(10)));
+    public static final RegistryObject<Item> PUZZLE_CUBE = ITEMS.register("puzzle_cube",
+            () -> new PuzzleCubeItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> PLASTIC_SPOON = ITEMS.register("plastic_spoon",
+            () -> new PlasticSpoonItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
 
     //armor set
-    public static final RegistryObject<Item> SHAWN_AVIATORS = ITEMS.register("shawn_aviators",
+    public static final RegistryObject<Item> TRIP_HAT = ITEMS.register("trip_hat",
             () -> new ArmorItem(ModArmorMaterials.SUBSPACE, EquipmentSlot.HEAD, new Item.Properties().rarity(Rarity.RARE).tab(ModCreativeModeTab.SUBSPACE_TAB)));
     public static final RegistryObject<Item> ROSENDALE_SHIRT = ITEMS.register("rosendale_shirt",
             () -> new ArmorItem(ModArmorMaterials.SUBSPACE, EquipmentSlot.CHEST, new Item.Properties().rarity(Rarity.RARE).tab(ModCreativeModeTab.SUBSPACE_TAB)));

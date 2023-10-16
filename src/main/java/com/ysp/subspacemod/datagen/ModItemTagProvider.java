@@ -1,7 +1,6 @@
 package com.ysp.subspacemod.datagen;
 
 import com.ysp.subspacemod.SubspaceMod;
-import com.ysp.subspacemod.block.ModBlocks;
 import com.ysp.subspacemod.item.ModItems;
 import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
@@ -29,11 +28,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
         );
 
         tag(BELT).add(
-                ModItems.NANCY.get()
+                ModItems.NANCY.get(),
+                ModItems.PLASTIC_SPOON.get()
         );
 
         tag(HEAD).add(
-                ModItems.QUAKE_PRO_GLASSES.get()
+                ModItems.QUAKE_PRO_GLASSES.get(),
+                ModItems.SHAWN_AVIATORS.get()
         );
 
         tag(HANDS).add(

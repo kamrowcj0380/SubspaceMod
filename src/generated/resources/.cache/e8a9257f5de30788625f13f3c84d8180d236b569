@@ -1,4 +1,5 @@
-// 1.19.2	2023-10-10T13:43:46.4295456	SubspaceMod Tags
-f54d4df50664f1a7094036ebb90bc0153db7b94a data/forge/tags/blocks/ores.json
-9f83cb451ff2661af9b3d32117ae164259013c8b data/minecraft/tags/blocks/mineable/pickaxe.json
-9f83cb451ff2661af9b3d32117ae164259013c8b data/minecraft/tags/blocks/needs_iron_tool.json
+// 1.19.2	2023-10-16T12:10:04.9161727	SubspaceMod Tags
+401ef08237b18d9bbe143a40db33c5bcaa7eaa28 data/curios/tags/items/belt.json
+d8e8eb0b382cfe7449bb232d41a3d09670d2eabc data/curios/tags/items/hands.json
+b080810b5efd768e4a89b861691fb89c1e47306c data/curios/tags/items/head.json
+42e9184517f46ed1da14804ff4fbde16449cf78e data/forge/tags/items/ores.json
