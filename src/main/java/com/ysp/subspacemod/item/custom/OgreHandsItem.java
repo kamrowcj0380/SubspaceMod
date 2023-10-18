@@ -36,6 +36,8 @@ public class OgreHandsItem extends Item implements ICurioItem {
         //sets the knockback attribute change
         playerAttributes.put(Attributes.ATTACK_KNOCKBACK,  new AttributeModifier(uuid, new ResourceLocation(SubspaceMod.MOD_ID, "ogre_hands_knockback_boost").toString(),knockbackBonus, AttributeModifier.Operation.ADDITION));
 
+
+
         //returns the new attributes
         return playerAttributes;
     }

@@ -38,7 +38,7 @@ public class ModItems {
     public static final RegistryObject<Item> OGRE_HANDS = ITEMS.register("ogre_hands",
             () -> new OgreHandsItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> QUAKE_PRO_GLASSES = ITEMS.register("quake_pro_glasses",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+            () -> new QuakeProGlassesItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> SHAWN_AVIATORS = ITEMS.register("shawn_aviators",
             () -> new ShawnAviatorsItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     //Adds nancy item with max stack of 1
