@@ -27,28 +27,29 @@ public class ShawnAviatorsItem extends Item implements ICurioItem {
         super(pProperties);
     }
 
-    //adds swiftness and unlucky effects while equipped
+    //adds swiftness while equipped
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         if (!slotContext.entity().level.isClientSide && slotContext.entity().tickCount % 15 == 0) {
             slotContext.entity().addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 250, 0, false, false, true));
-            //slotContext.entity().addEffect(new MobEffectInstance(MobEffects.UNLUCK, 250, 2, false, false, false));
         }
     }
 
+    //sets the luck modifier number
     int luckModifier = -1000;
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slot, UUID uuid, ItemStack stack) {
         //obtains the item attributes to modify
         Multimap<Attribute, AttributeModifier> playerAttributes = ICurioItem.super.getAttributeModifiers(slot, uuid, stack);
 
-        //sets the damage attribute change
+        //sets the luck attribute change
         playerAttributes.put(Attributes.LUCK, new AttributeModifier(uuid, new ResourceLocation(SubspaceMod.MOD_ID, "aviators_luck_boost").toString(), luckModifier, AttributeModifier.Operation.ADDITION));
 
         //returns the new attributes
         return playerAttributes;
     }
 
+    //empties the attribute tooltip so that the player doesn't know their luck is abysmal
     @Override
     public List<Component> getAttributesTooltip(List<Component> tooltips, ItemStack stack) {
         tooltips.clear();

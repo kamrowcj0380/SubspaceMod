@@ -94,18 +94,21 @@ public class SubspaceMod
 
         }
 
+        //registers new entity skin layers
         @SubscribeEvent
         public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
             event.registerLayerDefinition(ShawnModel.SHAWN_LAYER, ShawnModel::createBodyLayer);
             event.registerLayerDefinition(AndrewModel.ANDREW_LAYER, AndrewModel::createBodyLayer);
         }
 
+        //registers renderers for new entites
         @SubscribeEvent
         public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
             event.registerEntityRenderer(ModEntityTypes.SHAWN.get(), ShawnRenderer::new);
             event.registerEntityRenderer(ModEntityTypes.ANDREW.get(), AndrewRenderer::new);
         }
 
+        //adds reach distance and attack range attributes from forge to the player so they can be modified
         @SubscribeEvent
         public static void onEntityAttributeModificationEvent(final EntityAttributeModificationEvent event){
             event.add(EntityType.PLAYER, ForgeMod.REACH_DISTANCE.get());
