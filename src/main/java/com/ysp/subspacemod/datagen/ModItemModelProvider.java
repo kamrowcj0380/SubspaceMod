@@ -21,7 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SUBSPACE);
         simpleItem(ModItems.RAW_SUBSPACE);
 
-        simpleItem(ModItems.APPLE_PIPE);
+//        simpleItem(ModItems.APPLE_PIPE);
         simpleItem(ModItems.OGRE_HANDS);
         simpleItem(ModItems.QUAKE_PRO_GLASSES);
         simpleItem(ModItems.SHAWN_AVIATORS);
@@ -46,6 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         withExistingParent(ModItems.SHAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.ANDREW_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     //creates json file for a regular item being held (ex. Apple)
@@ -54,6 +55,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             new ResourceLocation("item/generated")).texture("layer0",
             new ResourceLocation(SubspaceMod.MOD_ID, "item/" + item.getId().getPath()));
     }
+
 
     //creates json file for a handheld item (ex. Pickaxe)
     private ItemModelBuilder handheldItem(RegistryObject<Item> item){
