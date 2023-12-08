@@ -44,6 +44,7 @@ public class ModItems {
     //Adds nancy item with max stack of 1
     public static final RegistryObject<Item> NANCY = ITEMS.register("nancy",
             () -> new NancyItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
+    //Adds shawn's phone
     public static final RegistryObject<Item> SHAWN_PHONE = ITEMS.register("shawn_phone",
             () -> new ShawnPhoneItem(new Item.Properties().tab(ModCreativeModeTab.SUBSPACE_TAB).stacksTo(1)));
     //painful mac and cheese food item that deals instant damage 1 when eaten

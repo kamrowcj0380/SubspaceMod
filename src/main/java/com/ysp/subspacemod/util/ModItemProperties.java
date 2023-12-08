@@ -15,10 +15,19 @@ public class ModItemProperties {
 
     public static void addCustomItemProperties() {
         setupApplePipe(ModItems.APPLE_PIPE.get());
+        setupShawnPhone(ModItems.SHAWN_PHONE.get());
     }
 
     private static void setupApplePipe(Item item) {
         ItemProperties.register(item, new ResourceLocation(SubspaceMod.MOD_ID, "using_pipe"), (stack, level, living, id) -> {
+            //TODO: find a way to implement the line below for a non-bow related item.
+            // && living.isUsingItem() && living.getUseItem() == stack
+            return living != null && living.isHolding(item) ? 1.0f : 0.0f;
+        });
+    }
+
+    private static void setupShawnPhone(Item item) {
+        ItemProperties.register(item, new ResourceLocation(SubspaceMod.MOD_ID, "using_phone"), (stack, level, living, id) -> {
             //TODO: find a way to implement the line below for a non-bow related item.
             // && living.isUsingItem() && living.getUseItem() == stack
             return living != null && living.isHolding(item) ? 1.0f : 0.0f;

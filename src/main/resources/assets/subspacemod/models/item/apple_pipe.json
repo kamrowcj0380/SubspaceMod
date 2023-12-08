@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "subspacemod:item/apple_pipe"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "subspacemod:using_pipe": 1
+      },
+      "model": "subspacemod:item/apple_pipe_lit"
+    }
+  ]
+}
